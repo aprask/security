@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Store Management System</title>
+</head>
+<body>
+<h1>Welcome to Book Store Management System</h1>
+
+<button th:onclick="getAllBooks()">Get All Books</button>
+<button th:onclick="getAllCDs()">Get All CDs</button>
+<button th:onclick="getAllDVDs()">Get All DVDs</button>
+<button th:onclick="findBookById()">Find Book by ID</button>
+<button th:onclick="deleteBookById()">Delete Book by ID</button>
+<button th:onclick="createBook()">Create Book</button>
+<button th:onclick="findCDById()">Find CD by ID</button>
+<button th:onclick="deleteCDById()">Delete CD by ID</button>
+<button th:onclick="createCD()">Create CD</button>
+<button th:onclick="findDVDById()">Find DVD by ID</button>
+<button th:onclick="deleteDVDById()">Delete DVD by ID</button>
+<button th:onclick="createDVD()">Create DVD</button>
+
+<script th:inline="javascript">
+    const PATH = '';
+    function getAllBooks() {
+        window.location.href = PATH + "/getAllBooks";
+    }
+    function getAllCDs() {
+        window.location.href = PATH + "/getAllCDs";
+    }
+    function getAllDVDs() {
+        window.location.href = PATH + "/getAllDVDs";
+    }
+    function findBookById() {
+        let id = prompt("Enter Book ID:");
+        if (id != null) {
+            window.location.href = PATH + "/findBookById?id=" + id;
+        }
+    }
+    function deleteBookById() {
+        let id = prompt("Enter Book ID:");
+        if (id != null) {
+            window.location.href = PATH + "/deleteBookById?id=" + id;
+        }
+    }
+    function createBook() {
+        window.location.href = PATH + "/createBook";
+    }
+    function findCDById() {
+        let id = prompt("Enter CD ID:");
+        if (id != null) {
+            window.location.href = PATH + "/findCDById?id=" + id;
+        }
+    }
+    function deleteCDById() {
+        let id = prompt("Enter CD ID:");
+        if (id != null) {
+            window.location.href = PATH + "/deleteCDById?id=" + id;
+        }
+    }
+    function createCD() {
+        window.location.href = PATH + "/createCD";
+    }
+    function findDVDById() {
+        let id = prompt("Enter DVD ID:");
+        if (id != null) {
+            window.location.href = PATH + "/findDVDById?id=" + id;
+        }
+    }
+    function deleteDVDById() {
+        let id = prompt("Enter DVD ID:");
+        if (id != null) {
+            window.location.href = PATH + "/deleteDVDById?id=" + id;
+        }
+    }
+    function createDVD() {
+        window.location.href = PATH + "/createDVD";
+    }
+</script>
+</body>
+</html>
